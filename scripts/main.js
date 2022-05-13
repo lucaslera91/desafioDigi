@@ -65,3 +65,5 @@ menuBtn.addEventListener('click', handleDisplayMenu);
 window.onload = removeEventListenerIfSmallScreen;
 
 
+
+//document.querySelector('body').addEventListener('click', e => console.log(e.target))

@@ -1,11 +1,14 @@
 .article-wrap{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
+    max-width: 234px;
 }
 .article-wrap img {
     padding: 25%;
+    width: 200px;
+
 }
 .article-wrap  p{
     font-family: 'Work Sans';
@@ -17,7 +20,7 @@
     align-items: center;
     text-align: center;
     letter-spacing: -0.02em;
-    width: 60%;
+    width: 70vw;
     padding-bottom: 2rem;
 }
 
@@ -28,6 +31,7 @@
         justify-content: center;
         flex-direction: row;
         align-items: center;
+        max-width: 80vw;
     }
     .article-wrap img {
         height: 362px;

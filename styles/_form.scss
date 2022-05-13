@@ -5,20 +5,23 @@
 section {
     display: flex;
     justify-content: center;
+  
+  
 }
 #form {
+    width: 100vw;
     padding: 1rem;
-    width: 100%;
-    overflow: hidden;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--form-texto-input);
+    padding: 1rem;  
 }
 #form h3{
     position: absolute;
-    top:8%;
+    top:5%;
     color: #305371;
 }
 .form-wraper{
@@ -28,18 +31,16 @@ section {
     display: flex;
     min-height: 579px;
     height:50vh;
-    width:90vw;
-    max-width: 738px;
+    width: 80vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem 1rem 0rem 1rem ;
     background-color : #FFFFFF;
-    margin: 10% 10%;
-   
+    margin-top: 10%;
+    margin-bottom: 10%;  
 }
 .form-wraper form{
-    width: 100%;
+    width: 80vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +62,7 @@ section {
     position: absolute;
     border: 0;
     height: 100%;
-    width: 90%;
+    width: 85%;
     margin-left: 11px;
     z-index: 30000;
      
@@ -86,14 +87,14 @@ section {
     align-items: center;
     justify-content: center;
     color: #FFFFFF;   
-    margin-top: 20px;
+    margin-top: 25px;
 }
 .required{
     padding-left:0;
     
     margin: 8px 8px 8px 8px;
     border-radius: 5px;
-    width: 100%;
+    width: 85%;
     height: 47px;
     font-size: 13px;
     display: flex;
@@ -158,6 +159,8 @@ section {
         min-height: 459px;
         height: 459px;
         max-height: 459px;
+        width: 80vw;
+    
     }
     .form-wraper button {
         margin-top: 0px;

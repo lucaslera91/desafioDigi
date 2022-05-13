@@ -1,21 +1,22 @@
 #carrusel-wrap{
     display: flex;
-    overflow: hidden;
+    //overflow: scroll;
     position: relative;
     width: 100%;
     top: 0%;
 }
 .hide-rest{
     position: relative;
-
-    overflow: hidden;
+    width: 100vw;
 }
 .inner-wrap{
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
     left:0%;
     transition: 0.8s ease;
+    overflow: hidden;
 }
 
 .card{
@@ -30,6 +31,7 @@
     margin: 21px;
     border-radius: 20px;
     box-shadow: 0px 0px 12px rgba(139, 95, 191, 0.6);
+    
   
 }
 .card img{
