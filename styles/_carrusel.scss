@@ -7,6 +7,7 @@
 }
 .hide-rest{
     position: relative;
+    overflow: hidden;
     width: 100vw;
 }
 .inner-wrap{
@@ -16,7 +17,6 @@
     justify-content: center;
     left:0%;
     transition: 0.8s ease;
-    overflow: hidden;
 }
 
 .card{

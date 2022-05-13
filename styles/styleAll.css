@@ -6,6 +6,7 @@
 
 .hide-rest {
   position: relative;
+  overflow: hidden;
   width: 100vw; }
 
 .inner-wrap {
@@ -14,8 +15,7 @@
   display: flex;
   justify-content: center;
   left: 0%;
-  transition: 0.8s ease;
-  overflow: hidden; }
+  transition: 0.8s ease; }
 
 .card {
   position: relative;
@@ -206,6 +206,19 @@ li {
     max-width: 80vw; }
 
   .article-wrap img {
+    height: 180px;
+    width: 180px;
+    padding: 50px; } }
+@media (min-width: 1400px) {
+  .article-wrap {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    max-width: 80vw; }
+
+  .article-wrap img {
     height: 362px;
     width: 362px;
     padding: 118px; } }
@@ -237,7 +250,8 @@ footer {
     top: 50%; } }
 * {
   margin: 0;
-  top: 0; }
+  top: 0;
+  font-family: 'Work Sans', sans-serif; }
 
 header {
   position: relative;
