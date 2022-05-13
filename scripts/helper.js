@@ -96,42 +96,6 @@ const handleForm = (e) => {
 
 //
 
-//carrusel con mouse - si los movimientos son para un lado gira la posicion del div correspondiente. si es para el otro lado proceso inverso
-
-caruselWrap.addEventListener('mousedown', (e) => {
-    clickeado = true;
-    inicioX = e.clientX
-})
-
-caruselWrap.addEventListener('mouseup', (e) => {
-    clickeado = false;
-})
-
-
-// mas logica para el movimiento del click
-caruselWrap.addEventListener('mousemove', (e) => {
-    if (!clickeado) return
-    if (window.innerWidth > 900) return
-    e.preventDefault();
-
-    let part = window.innerWidth / 3
-
-    const next = (part) => {
-        innerWrap.offsetLeft > 100 && innerWrap.offsetLeft > - 100 ? avance = 0 : avance = - part
-    }
-
-    const prev = (part) => {
-        innerWrap.offsetLeft < 100 && innerWrap.offsetLeft < -100 ?
-            avance = 0 :
-            avance = part
-    }
-
-    e.clientX - inicioX < 0 ?
-        next(part) :
-        prev(part)
-
-    innerWrap.style.left = `${avance}px`
-})
 
 //este resize esta porque cuando ejecuto JS para manipular tamaños me quedan mal configruadas algunas partes del diseño. 
 // si es mobile vuele acciona de una forma, sino de otra
@@ -157,36 +121,18 @@ const removeEventListenerIfSmallScreen = () => {
 
 // manipulo carrusel con touch
 
-const handleTouchStart = (e) => {
-    //console.log(e.touches[0].clientX)
-}
-const handleTouchEnd = (e) => {
-    console.log(e.touches[0].clientX)
-    //console.log(e)
-}
-//caruselWrap.addEventListener('touchmove', e => console.log(e))
-//caruselWrap.addEventListener('touch', e => console.log(e.target))
-caruselWrap.addEventListener('touchstart', handleTouchStart)
-caruselWrap.addEventListener('touchmove', handleTouchEnd)
-
-
-
 caruselWrap.addEventListener('touchstart', (e) => {
     touch = true;
     inicioTouch = e.touches[0].clientX
-    //console.log(inicioTouch)
 })
 
 caruselWrap.addEventListener('touchend', (e) => {
     touch = false;
-    //console.log('first')
 })
 
-// testeo
+// moving function that recieves end position , start pos, and the space to move.
 
-const carruselMovingFunction = (e) => {
-    //console.log(e)
-    let part = window.innerWidth * 207 / window.innerWidth
+const carruselMovingFunction = (end, start, part) => {
 
     const next = (part) => {
         innerWrap.offsetLeft > 100 && innerWrap.offsetLeft > - 100 ? avance = 0 : avance = - part
@@ -196,7 +142,7 @@ const carruselMovingFunction = (e) => {
             avance = 0 :
             avance = part
     }
-    e.touches[0].clientX - inicioTouch < 0 ?
+    end - start < 0 ?
         next(part) :
         prev(part)
 
@@ -209,9 +155,31 @@ caruselWrap.addEventListener('touchmove', (e) => {
     if (window.innerWidth > 900) return
 
     e.preventDefault();
-    carruselMovingFunction(e);
+    carruselMovingFunction(e.touches[0].clientX, inicioTouch, window.innerWidth * 207 / window.innerWidth);
 
 })
+
+//carrusel con mouse - si los movimientos son para un lado gira la posicion del div correspondiente. si es para el otro lado proceso inverso
+
+caruselWrap.addEventListener('mousedown', (e) => {
+    clickeado = true;
+    inicioX = e.clientX
+})
+
+caruselWrap.addEventListener('mouseup', (e) => {
+    clickeado = false;
+})
+
+// mas logica para el movimiento del click
+caruselWrap.addEventListener('mousemove', (e) => {
+    if (!clickeado) return
+    if (window.innerWidth > 900) return
+    e.preventDefault();
+
+    carruselMovingFunction(e.clientX, inicioX, window.innerWidth / 3);
+
+})
+
 
 
 
