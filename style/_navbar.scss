@@ -1,0 +1,150 @@
+
+nav{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 89px;
+}
+
+
+
+#contenedor-nav-bar{
+    position: absolute;
+    background-color: #8B5FBF;
+    height: 667px;
+    width: 80vw;
+    left:100vw;
+    top:0px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    transition: 0.3s ease;
+    margin-left: 20vw;
+}
+
+ul{
+    position: absolute;
+    top:10%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 0;
+    padding: 1rem 0rem 0 0rem ;
+}
+#menu-hamburguesa{
+    position: absolute;
+    background-image: url(../recursos/iconos/menu_24px.svg);
+    left: 84%;
+    top: -9%;
+    transform: translate(-50%,-50%);
+    height: 3rem;
+    width: 3rem;
+    z-index: 300;
+    transition: 0.3s ease ;
+}
+#menu-hamburguesa:hover{
+    cursor:pointer ;
+}
+
+li{
+    margin: 1rem;
+    padding: 0;
+    
+}
+#button-texto{
+color: white;
+border: 2px solid white;
+height: 48px;
+width: 115px;
+padding: 1rem;
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: transparent;
+z-index: 2500;
+}
+
+@media (min-width: 759px) {
+    #contenedor-nav-bar{
+      left: -100px;
+    }
+   
+}
+@media (min-width: 760px) { 
+
+    #menu-hamburguesa{
+        display: none;
+        z-index: -1;
+    }
+
+    nav{
+        flex-direction: row;
+        top:0;
+    
+    }
+    #contenedor-nav-bar{
+        position: absolute;
+        height: 100px;
+        top: -95px;
+        left: 20%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+        z-index: 35;
+        width: 70%;
+        transition: none;
+        background-color: transparent;
+        z-index: 5;
+    }
+    @media (min-width: 900px) { 
+     
+        #contenedor-nav-bar{
+            left: 15%;
+            
+        }
+        
+     }
+    ul{    
+        flex-direction: row;
+        top:0;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        padding-right: 25vw;  
+    }
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;
+        margin-left: 30px;
+    }
+    #button-texto{
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        background-color: transparent;
+        }
+ }
+ @media (min-width: 1400px) { 
+    #contenedor-nav-bar{
+        height: 8vw;
+        max-height: 110px;
+        
+    }
+    #contenedor-nav-bar{
+        left: 10%;
+    }
+    
+ }

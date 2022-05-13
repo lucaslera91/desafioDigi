@@ -1,0 +1,28 @@
+footer{
+    background-color: #C4C4C4;
+}
+#logo-footer{
+    width: 100%;
+    height: 76px;
+    display: flex;
+    z-index: 5;
+}
+#logo-footer img{
+    position: relative;
+    top:50%;
+    left: 50%;
+}
+@media (min-width: 760px) {
+
+    .form-wraper form{
+       flex-direction: row;
+    }
+    .column{
+        margin: 1rem;
+    }
+    #logo-footer img{
+        left: 25%;
+        top:50%;
+    }  
+}
+
