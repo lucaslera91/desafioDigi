@@ -54,7 +54,7 @@ const makeFormScreen = () => {
     screen.style.zIndex = '0'
     formWraper.style.backgroundColor = '#FFFFFF';
 
-    salirFormScreen.addEventListener('click', volverPantallaNormal)
+    salirForm.addEventListener('click', volverPantallaNormal)
 }
 
 // vuelvo todo igual al estado anterior
