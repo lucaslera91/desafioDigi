@@ -258,9 +258,6 @@ footer {
   .form-wraper form {
     flex-direction: row; }
 
-  .column {
-    margin: 1rem; }
-
   #logo-footer img {
     left: 20%;
     top: 50%; } }
