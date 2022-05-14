@@ -240,7 +240,7 @@ li {
 
 footer {
   background-color: var(--footer-bg-color);
-  width: 100vw;
+  width: 100%;
   overflow: hidden; }
 
 #logo-footer {
