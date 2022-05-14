@@ -247,7 +247,8 @@ footer {
   width: 95%;
   height: 76px;
   display: flex;
-  z-index: 5; }
+  z-index: 5;
+  display: none; }
 
 #logo-footer img {
   position: relative;
