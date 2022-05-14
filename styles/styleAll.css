@@ -247,13 +247,13 @@ footer {
   width: 100%;
   height: 76px;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   z-index: 5; }
 
 #logo-footer img {
   position: relative;
   top: 50%;
-  grid-column: 4 / 7;
+  grid-column: 8 / 15;
   grid-row: 1; }
 
 @media (min-width: 760px) {
@@ -261,7 +261,7 @@ footer {
     flex-direction: row; }
 
   #logo-footer img {
-    grid-column: 2 / 5;
+    grid-column: 2 / 15;
     grid-row: 1; } }
 * {
   margin: 0;
@@ -318,7 +318,7 @@ header {
   height: 3rem;
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 25%;
   transform: translate(-50%, -50%); }
 
 @media (min-width: 760px) {
