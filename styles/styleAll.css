@@ -253,8 +253,9 @@ footer {
 #logo-footer img {
   position: relative;
   top: 50%;
-  grid-column: 8 / 15;
-  grid-row: 1; }
+  grid-column: 6 / 15;
+  grid-row: 1;
+  transform: translate(-50%, -50%); }
 
 @media (min-width: 760px) {
   .form-wraper form {
