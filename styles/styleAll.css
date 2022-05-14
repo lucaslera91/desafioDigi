@@ -435,11 +435,11 @@ header {
 
 section {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
 
 #form {
   width: 100vw;
-  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
