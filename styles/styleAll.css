@@ -244,7 +244,7 @@ footer {
   overflow: hidden; }
 
 #logo-footer {
-  width: 100%;
+  width: 95%;
   height: 76px;
   display: flex;
   z-index: 5; }
@@ -389,7 +389,7 @@ header {
 
   .bg-img {
     height: 58vh;
-    width: 100%;
+    width: 95%;
     background-size: contain; } }
 @media (min-width: 1700px) {
   .slide-help {
