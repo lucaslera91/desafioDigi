@@ -8,21 +8,29 @@ let x;
 
 // Abrir el menu del slider. indico las posiciones que quiero. manipulo los overflow para llegar a los flujos solicitados.
 const openMenu = (width) => {
+
     const slider = document.querySelector('#contenedor-nav-bar')
     slider.style.left = width;
     menuBtn.style.backgroundImage = 'url(../recursos/iconos/close_24px.svg)'
-    document.querySelector('body').style.overflow = 'hidden'
-    document.querySelector('.slide-help').style.overflow = 'visible'
+    document.querySelector('body')
+        .style.overflow = 'hidden'
+    document.querySelector('.slide-help')
+        .style.overflow = 'visible'
 }
 
 //Cerrar el meno slider. mismo que recien. reestablezco posiciones iniciales
 const closeMenu = (width) => {
     const slider = document.querySelector('#contenedor-nav-bar')
+
     slider.style.left = width;
     slider.style.display = 'flex'
+
     menuBtn.style.backgroundImage = 'url(../recursos/iconos/menu_24px.svg)'
-    document.querySelector('body').style.overflow = 'visible'
-    document.querySelector('.slide-help').style.overflow = 'hidden'
+
+    document.querySelector('body')
+        .style.overflow = 'visible'
+    document.querySelector('.slide-help')
+        .style.overflow = 'hidden'
 }
 
 //Creo pantalla de form especial con el button en modo desktop. manipulo los formatos y clases
@@ -30,17 +38,22 @@ const closeMenu = (width) => {
 const makeFormScreen = () => {
     const screen = document.querySelector('.screen')
     screen.classList.add('blur-screen')
-    const salirFormScreen = document.querySelector('.salir')
+
     const salirForm = document.querySelector('.salir')
     salirForm.classList.add('salir-form')
-    document.querySelector('header').style.overflow = 'visible'
-    document.querySelector('body').style.overflow = 'hidden'
+
+    document.querySelector('header')
+        .style.overflow = 'visible'
+    document.querySelector('body')
+        .style.overflow = 'hidden'
+
     const formWraper = document.querySelector('.form-wraper')
     formWraper.style.position = 'absolute'
     formWraper.style.left = ''
     formWraper.style.top = ''
     screen.style.zIndex = '0'
     formWraper.style.backgroundColor = '#FFFFFF';
+
     salirFormScreen.addEventListener('click', volverPantallaNormal)
 }
 
@@ -50,8 +63,10 @@ const volverPantallaNormal = () => {
 
     const screen = document.querySelector('.screen')
     screen.classList.remove('blur-screen')
-    document.querySelector('header').style.overflow = 'hidden'
-    document.querySelector('body').style.overflow = 'visible'
+    document.querySelector('header')
+        .style.overflow = 'hidden'
+    document.querySelector('body')
+        .style.overflow = 'visible'
     const formWraper = document.querySelector('.form-wraper')
     formWraper.style.position = 'relative'
     formWraper.style.left = '0'
@@ -179,8 +194,6 @@ caruselWrap.addEventListener('mousemove', (e) => {
     carruselMovingFunction(e.clientX, inicioX, window.innerWidth / 3);
 
 })
-
-
 
 
 

@@ -1,4 +1,7 @@
-
+ :root {
+    --header-text-color: #FFFFFF;
+    --logo-bg-color: #8B5FBF;
+}
 header{
     position: relative; 
     overflow: hidden;
@@ -29,7 +32,7 @@ header{
     left:50%;
     transform: translate(-50%,-50%);
     font-size: 35px;
-    color: white;
+    color: var(--header-text-color);
     width: 70%;
    
 }
@@ -42,7 +45,7 @@ header{
     position: absolute;
     width:100vw;
     height: 89px;
-    background-color: #8B5FBF;
+    background-color: var(--logo-bg-color);
     z-index: 0;
 }
 

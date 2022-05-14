@@ -1,5 +1,8 @@
+:root {
+    --footer-bg-color: #C4C4C4;
+}
 footer{
-    background-color: #C4C4C4;
+    background-color: var(--footer-bg-color);
     width: 100vw;
     overflow: hidden;
 }

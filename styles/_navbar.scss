@@ -1,3 +1,11 @@
+:root {
+    --header-text-color: #FFFFFF;
+    --slider-bg-color: #8B5FBF;
+    --btn-border-color: #FFFFFF;
+    --btn-texto-color: #FFFFFF;
+    --ul-texto-color:#FFFFFF;
+ 
+}
 
 nav{
     position: relative;
@@ -11,8 +19,8 @@ nav{
 
 #contenedor-nav-bar{
     position: absolute;
-    background-color: #8B5FBF;
-    height: 667px;
+    background-color: var(--slider-bg-color);
+    height: 867px;
     width: 80vw;
     left:100vw;
     top:0px; 
@@ -31,7 +39,7 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
+    color: var(--ul-texto-color);
     padding: 0;
     padding: 1rem 0rem 0 0rem ;
 }
@@ -56,8 +64,8 @@ li{
     
 }
 #button-texto{
-color: white;
-border: 2px solid white;
+color: var(--btn-texto-color);
+border: 2px solid var(--btn-border-color);
 height: 48px;
 width: 115px;
 padding: 1rem;
