@@ -49,8 +49,8 @@ const makeFormScreen = () => {
 
     const formWraper = document.querySelector('.form-wraper')
     formWraper.style.position = 'absolute'
-    formWraper.style.left = ''
-    formWraper.style.top = ''
+    formWraper.style.left = '0'
+    formWraper.style.top = '0'
     screen.style.zIndex = '0'
     formWraper.style.backgroundColor = '#FFFFFF';
 
@@ -65,15 +65,19 @@ const volverPantallaNormal = () => {
     screen.classList.remove('blur-screen')
     document.querySelector('header')
         .style.overflow = 'hidden'
+
     document.querySelector('body')
         .style.overflow = 'visible'
+
     const formWraper = document.querySelector('.form-wraper')
     formWraper.style.position = 'relative'
     formWraper.style.left = '0'
     formWraper.style.top = '0'
     screen.style.zIndex = '1'
-    formWraper.style.transform = 'translate(0)'
-    formWraper.style.backgroundColor = 'transparent';
+    //formWraper.style.transform = 'translate(0)'
+    //formWraper.style.backgroundColor = 'transparent';
+    document.querySelector('.salir').classList.remove('salir-form')
+
 }
 
 // El cambio de place holder me estaba trayendo provblemas para funcionar como queria, por lo que para la prueba lo solucione con JS. 
