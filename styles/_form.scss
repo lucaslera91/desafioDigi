@@ -112,7 +112,7 @@ section {
     background: var(--label-bg-color);
     z-index: 10;
 }
-.required p{
+.required .p{
     margin: 0;
     position: relative;
     left: 13px;
@@ -123,7 +123,7 @@ section {
     color: var(--input-text-input);  
     
 }
-.required p span{
+.required .p span{
     margin: 5%;
     padding: 0;
     color: var(--inputStar-text-color); 

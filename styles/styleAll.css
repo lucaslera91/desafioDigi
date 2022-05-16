@@ -253,8 +253,9 @@ footer {
 #logo-footer img {
   position: relative;
   top: 50%;
-  grid-column: 6 / 15;
+  grid-column: 7 / 15;
   grid-row: 1;
+  left: 20%;
   transform: translate(-50%, -50%); }
 
 @media (min-width: 760px) {
@@ -530,7 +531,7 @@ section {
   background: var(--label-bg-color);
   z-index: 10; }
 
-.required p {
+.required .p {
   margin: 0;
   position: relative;
   left: 13px;
@@ -540,7 +541,7 @@ section {
   z-index: 20;
   color: var(--input-text-input); }
 
-.required p span {
+.required .p span {
   margin: 5%;
   padding: 0;
   color: var(--inputStar-text-color); }
